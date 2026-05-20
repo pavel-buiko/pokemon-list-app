@@ -29,9 +29,9 @@ Lists are stored as documents with a snapshot of each Pokémon (`id`, `name`, `w
 
 The client can load this JSON on the create page. The server still validates against PokeAPI when you save.
 
-## Docker
+## Build with Docker
 
-From the directory that contains `docker-compose.yaml`:
+From the directory that contains `docker-compose.yaml` (now it's `root`):
 
 ```bash
 docker compose up --build
@@ -43,9 +43,11 @@ docker compose up --build
 | API | http://localhost:3000 |
 | MongoDB | localhost:27017 |
 
-## Local dev
+## Build for local dev
 
 Requirements: Node 22+, pnpm 10+, Docker for Mongo.
+
+From the directory that contains `docker-compose.yaml` (now it's `root`):
 
 ```bash
 docker compose up mongo -d
@@ -63,7 +65,6 @@ Runs on http://localhost:3000. Env: `MONGODB_URI` (default `mongodb://localhost:
 Frontend (`apps/frontend`):
 
 ```bash
-cp .env.example .env
 pnpm install
 pnpm run dev
 ```
