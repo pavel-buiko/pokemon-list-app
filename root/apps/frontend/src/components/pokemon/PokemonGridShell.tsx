@@ -29,7 +29,7 @@ export function PokemonGridShell({
   } else {
     children.forEach((child, index) => {
       slots.push(
-        <div key={`item-${index}`} className="transition-opacity duration-200">
+        <div key={`item-${index}`} className="flex transition-opacity duration-200">
           {child}
         </div>,
       );
